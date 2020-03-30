@@ -3,17 +3,17 @@ import pandas as pd
 import unidecode
 
 def read_excel():
-    df = pd.read_excel("C:/Users/claudemirsfj/Downloads/lista_cidades_crawlers.xlsx")
-    cities = list(map(str.strip, df["CIDADE"].tolist()))
+    df = pd.read_excel("Path/To/city_list.xlsx")
+    cities = list(map(str.strip, df["CITY"].tolist())) # Creates a city list from DataFrame
 
     return cities
 
 def generator(cities):
     for city in cities:
-        # Remove word accent
-        unaccent = unidecode.unidecode(city)
+        
+        unaccent = unidecode.unidecode(city) # Remove word accent
 
-        spider_name = unaccent.lower().replace(" ", "_")
+        spider_name = unaccent.lower().replace(" ", "_") # spider
 
         link_apto = """ start_urls = [
                     \t\"https://glue-api.vivareal.com/v1/listings?&filterUnitType=APARTMENT&addressCity={}&size=100&from=000\",\n""".format(city)
