@@ -4,6 +4,7 @@ import unidecode
 
 def read_excel():
     df = pd.read_excel("Path/To/city_list.xlsx")
+    df.drop_duplicates(inplace = True)
     cities = list(map(str.strip, df["CITY"].tolist()))
 
     return cities
