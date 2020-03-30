@@ -36,7 +36,6 @@ def generator(cities):
         new_spider.write(code_2)
 
         new_spider.close()
-        break
 
 if __name__ == "__main__":
     cities = read_excel()
