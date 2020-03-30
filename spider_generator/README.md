@@ -5,7 +5,7 @@ properties ads from [VivaReal](https://www.vivareal.com.br/) and store it in a P
 
 ## Tools:
 
-* [Amazon Web Services](https://aws.amazon.com)
+* [Amazon Web Services](https://aws.amazon.com);
 * [Scrapy](https://scrapy.org/);
 * [Pandas](https://pandas.pydata.org/);
 * [Python 3](https://www.python.org/).
