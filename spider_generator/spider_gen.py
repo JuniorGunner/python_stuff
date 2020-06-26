@@ -16,10 +16,10 @@ def generator(cities):
 
         spider_name = unaccent.lower().replace(" ", "_") # Spider name pattern
 
-        link_apto = """\n    start_urls = [ \"https://glue-api.vivareal.com/v1/listings?&filterUnitType=APARTMENT&addressCity={}&size=100&from=000\",\n""".format(city)
-        link_home = "\"https://glue-api.vivareal.com/v1/listings?&filterUnitType=HOME&addressCity={}&size=100&from=000\",\n".format(city)
-        link_land = "\"https://glue-api.vivareal.com/v1/listings?&filterUnitType=RESIDENTIAL_ALLOTMENT_LAND&addressCity={}&size=100&from=000\",\n".format(city)
-        link_2story = "\"https://glue-api.vivareal.com/v1/listings?&filterUnitType=TWO_STORY_HOUSE&addressCity={}&size=100&from=000\"]\n".format(city)
+        link_apto = f"""\n    start_urls = [ \"https://glue-api.vivareal.com/v1/listings?&filterUnitType=APARTMENT&addressCity={city}&size=100&from=000\",\n"""
+        link_home = f"\"https://glue-api.vivareal.com/v1/listings?&filterUnitType=HOME&addressCity={city}&size=100&from=000\",\n"
+        link_land = f"\"https://glue-api.vivareal.com/v1/listings?&filterUnitType=RESIDENTIAL_ALLOTMENT_LAND&addressCity={city}&size=100&from=000\",\n"
+        link_2story = f"\"https://glue-api.vivareal.com/v1/listings?&filterUnitType=TWO_STORY_HOUSE&addressCity={city}&size=100&from=000\"]\n"
 
         base_file = open("Scrapy/Project/spiders/vivareal_city.py", "r")
         code_1 = base_file.read(1003)
